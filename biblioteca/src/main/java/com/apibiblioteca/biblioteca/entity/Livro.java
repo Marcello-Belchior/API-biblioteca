@@ -1,9 +1,24 @@
 package com.apibiblioteca.biblioteca.entity;
 
+import jakarta.persistence.Colunm;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import jakarta.persistence.Entity;
 
 @Entity
 @Table(name = "livro")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Livro {
 
     @Id
