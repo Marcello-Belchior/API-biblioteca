@@ -1,9 +1,9 @@
 package com.apibiblioteca.biblioteca.entity;
 
-import jakarta.persistence.Colunm;
+import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-import jakarta.persistence.id;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -14,11 +14,13 @@ import lombok.Setter;
 import jakarta.persistence.Entity;
 
 @Entity
-@Table(name = "livro")
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Table(name = "livro")
+
+
 public class Livro {
 
     @Id
@@ -26,19 +28,19 @@ public class Livro {
     private Long idLivro;
 
     @NotBlank
-    @Colunm(length = 150)
+    @Column(length = 150)
     private String tituloLivro;
 
     @NotBlank
-    @Colunm(length = 50)
+    @Column(length = 50)
     private String autorLivro;
 
-    @Colunm(length = 50)
+    @Column(length = 50)
     private String editorLivro;
 
     @NotNull
     private Integer anoPublicacaoLivro;
 
-    @Colunm(unique = true, length 20)
+    @Column(unique = true, length =  20)
     private String isbnLivro;
 }
