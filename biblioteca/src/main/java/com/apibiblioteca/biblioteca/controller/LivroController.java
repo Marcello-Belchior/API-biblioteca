@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import com.apibiblioteca.biblioteca.entity.Livro;
 import com.apibiblioteca.biblioteca.repository.LivroRepository;
 
+@CrossOrigin(origins = {
+    "http://127.0.0.1:5501",
+    "http://localhost:5501"
+})
+
 @RestController
 @RequestMapping("/api/livros")
 public class LivroController {
